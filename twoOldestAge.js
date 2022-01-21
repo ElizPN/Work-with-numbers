@@ -1,4 +1,4 @@
-let age = [2, 5, 6, 60, 7, 8, 80];
+let age = [2, 101, 6, 95, 7, 8, 80, 96, 100, 67, 99];
 
 function twoOldestAges(age) {
   let newArr = [];
@@ -8,6 +8,8 @@ function twoOldestAges(age) {
     if (oldestAge < age[i]) {
       almostOld = oldestAge;
       oldestAge = age[i];
+    } else if (almostOld < age[i]) {
+      almostOld = age[i];
     }
   }
   newArr.push(oldestAge, almostOld);
